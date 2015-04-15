@@ -3357,6 +3357,7 @@ table th[class*="col-"] {
 }
 
 @media screen and (max-width: 767px) {
+#navbar-desktop{display:none;}
   /* line 171, ../assets/stylesheets/bootstrap/_tables.scss */
   .table-responsive {
     width: 100%;
@@ -5096,10 +5097,10 @@ tbody.collapse.in {
 
 /* line 11, ../assets/stylesheets/bootstrap/_navbar.scss */
 .navbar {
-  position: relative;
+/*  position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  border: 1px solid transparent;*/
 }
 /* line 14, ../assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .navbar:before, .navbar:after {
@@ -5461,8 +5462,8 @@ tbody.collapse.in {
 
 /* line 394, ../assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+/*  background-color: #f8f8f8;
+  border-color: #e7e7e7;*/
 }
 /* line 398, ../assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand {
@@ -8162,16 +8163,16 @@ body:after {
 
 /* line 41, ../scss/main.scss */
 .navbar .nav {
-  margin: 0;
+/*  margin: 0;
   display: table;
-  width: 100%;
+  width: 100%;*/
 }
 
 /* line 42, ../scss/main.scss */
 .navbar .nav li {
-  display: table-cell;
+/*  display: table-cell;
   width: 1%;
-  float: none;
+  float: none;*/
 }
 
 /* line 43, ../scss/main.scss */
@@ -8181,17 +8182,17 @@ body:after {
 
 /* line 44, ../scss/main.scss */
 .navbar .nav li a {
-  font-weight: bold;
+/*  font-weight: bold;
   color: #fff;
   text-align: center;
   border-left: 1px solid rgba(255, 255, 255, 0.75);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);*/
 }
 
 /* line 45, ../scss/main.scss */
 .navbar .nav li:first-child a {
-  border-left: 0;
-  border-radius: 3px 0 0 3px;
+/*  border-left: 0;
+  border-radius: 3px 0 0 3px;*/
 }
 
 /* line 46, ../scss/main.scss */
@@ -8357,6 +8358,7 @@ body:after {
     float: left;
     width: 25%;
   }
+  #navbar-mobile{display:none;}
 }
 /* line 89, ../scss/main.scss */
 .site-content .content {
