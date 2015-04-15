@@ -1,0 +1,38 @@
+
+<script type="text/javascript">
+	function validateForm() {
+		$('#subscriber_name_error_message').text('');
+		$('#subscriber_email_error_message').text('');
+		
+		if(!$('#subscriber_name').val()) {
+			$('#subscriber_name_error_message').text('Name Required');
+			return false;
+		}
+		
+		if(!$('#subscriber_email').val()) {
+			$('#subscriber_email_error_message').text('Email Required!');
+			return false;
+		}
+		return true;
+	}
+	
+</script>
+
+<DIV class=leftcoldiv>
+		<H3 style="font-size: 12px;">Subscribe to Our Newsletter</H3>
+		<form method="post" action="subscribe.php" onsubmit="return validateForm();">
+			<p>
+				<label>Name</label>
+				<input type="text" value="" name="name" size="25" id="subscriber_name"/>
+			</p>
+			<p id="subscriber_name_error_message" class="error_message" style="color: red;"></p>
+			<p>
+				<label>Email</label>
+				<input type="text" value="" name="email" size="25" id="subscriber_email"/>
+			</p>
+			<p id="subscriber_email_error_message" class="error_message" style="color: red;"></p>
+			<p style="clear: both;"></p>
+			<p style="margin-top:10px; text-align: center;"><input type="submit" value="Subscribe"></p>
+		</form>
+</DIV>
+

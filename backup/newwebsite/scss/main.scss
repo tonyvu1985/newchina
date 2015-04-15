@@ -1,0 +1,83 @@
+@import "compass";
+@import "bootstrap";
+.help-block{color:#ff0000}
+textarea{resize: none}
+
+.btnhoc{text-align:center; text-transform:uppercase; margin-top:20px;}
+h1{color:#5bc0de; font-weight:bold}
+h2, h3{color:#5bc0de}
+body{
+	@include container-fixed();
+
+	@media(min-width: $screen-sm-min){
+		width: $container-sm;
+	}
+	@media(min-width: $screen-md-min){
+		width: $container-md;
+	}
+	@media(min-width: $screen-lg-min){
+		width: $container-lg;
+	}
+	background:url('../images/seamless_paper_texture.png')repeat top left;
+}
+.wrapper{@include make-row();background:#fff;}
+.treatments {padding:0}
+.treatments li{list-style-type:none;}
+.navbar{border:0; border-radius:0}
+.navbar-default{background-color:#5bc0de;}
+.navbar-default .navbar-nav > li > a{color:#fff}
+.navbar-default .navbar-nav > li > a:hover{text-decoration:none; background-color:#28a9f0}
+.navbar-default .navbar-brand{background-color:#c9302c; color:#fff;}
+.carousel-caption{background:#000; opacity:0.9; filter: alpha(opacity=90);}
+.top{
+	@include make-xs-column(12);
+	padding: 25px 0;
+	.site-logo{@include make-sm-column(3);}
+	.contact{@include make-sm-column(9);}
+	.btnhealthfund{
+		@include button-variant(#fff, $brand-info, $btn-info-color);
+		@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base); 
+		&:hover{text-decoration:none;}
+		@extend .btnhoc;
+	}
+}
+.widget{
+	h4{color:#fff; background:#d9534f; padding: 10px 3px; text-transform:uppercase;}
+	li{background-color:$brand-info; margin:2px 0;}
+	li a{color:#fff; padding:5px; display:block;
+	&:hover{text-decoration:none; background-color:#28a9f0;}
+	}
+}
+.leftcoldiv{
+	.btnsubmit{
+		@include button-variant(#fff, $brand-danger, $btn-danger-color);
+		@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+		@extend .btnhoc;
+		display:block;
+	}
+}
+
+.site-content{
+	@include make-xs-column(12);
+	.featured{
+		@include make-sm-column(3);
+	}
+	.content{
+		@include make-sm-column(9);
+		.service{@include make-xs-column(6);}
+		// about page
+		.about{@include make-xs-column(12);}
+		.hocimg{@include make-xs-column(2); padding-left:0}
+		.hocinfo{@include make-xs-column(10);}
+	}
+}
+
+.site-footer{
+	margin-top:30px;
+	@include make-xs-column(12);
+	color:white;
+	background-color: $brand-info;
+	padding: $padding-large-horizontal;
+	.city{@include make-sm-column(6);/*	@include make-sm-column-offset(4);*/}
+	.fairfield{@include make-sm-column(6);}
+}

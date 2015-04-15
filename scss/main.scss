@@ -1,0 +1,140 @@
+@import "compass";
+@import "bootstrap";
+
+$lightblue1: #28a9f0;
+$lightblue2: #1ec7f5;
+$darkblue: #283fad;
+$red: #bd363f;
+$white: #fff;
+.help-block{color:#ff0000}
+textarea{resize: none}
+.txtsuccess, .sucess-message{color:$red; display:none}
+.glyphicon-refresh{display:none}
+.btnhoc{text-align:center; text-transform:uppercase; margin-top:20px;}
+.txtlogo{
+	font-size:35px; padding-left:0;	margin-top:15px;
+	.newchina{font-family: 'Oswald', sans-serif; font-weight:bold}
+	.acupuncture{font-family: 'Oswald', sans-serif; font-weight:normal}
+}
+h1{color:#5bc0de; font-size:26px; font-family: 'Roboto Condensed', sans-serif;}
+h2, h3{color:#5bc0de; font-family: 'Roboto Condensed', sans-serif; font-size:20px}
+body{
+	@include container-fixed();
+
+	@media(min-width: $screen-sm-min){
+		width: $container-sm;
+	}
+	@media(min-width: $screen-md-min){
+		width: $container-md;
+	}
+	@media(min-width: $screen-lg-min){
+		width: $container-lg;
+	}
+/*	background:url('../images/seamless_paper_texture.png')repeat top left;*/
+	font-family: 'Droid Sans', sans-serif;
+}
+.wrapper{@include make-row();background:$white; border: 1px solid #ddd}
+.treatments {padding:0}
+.treatments li{list-style-type:none;}
+.navbar .navbar-inner {padding: 0;}
+.navbar .nav {margin: 0; display: table; width: 100%;}
+.navbar .nav li {display: table-cell; width: 1%; float: none;}
+.nav > li > a:hover, .nav > li > a:focus , .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{background:none }
+.navbar .nav li a {font-weight: bold; color:#fff; text-align: center; border-left: 1px solid rgba(255, 255, 255, .75); border-right: 1px solid rgba(0, 0, 0, .1);}
+.navbar .nav li:first-child a {border-left: 0; border-radius: 3px 0 0 3px;}
+.navbar .nav li:last-child a {border-right: 0; border-radius: 0 3px 3px 0;}
+.open > .dropdown-menu{width:100%;}
+.dropdown-menu{margin-top:0}
+.dropdown:hover .dropdown-menu {display: block;width:100%;}
+.aboutMenu, .conditionMenu, .faqMenu{background-color:#28a9f0}
+.homeMenu, .treatmentMenu, .nutritionMenu, .contactMenu{background-color:#1ec7f5}
+.homeMenu a, .aboutMenu a, .conditionMenu a, .faqMenu a, .treatmentMenu a, .nutritionMenu a, .contactMenu a{color:#fff;}
+.carousel{border-top: 10px solid #283ead}
+.RHS{
+	background-color:#7ac0db; margin-top:30px; padding-top:10px; padding-bottom:30px;
+	p{font-weight:bold}
+}
+.carousel-caption{
+	left: 5%; top: 0%; text-align: left; width:400px;
+	h1{color:#fff;}
+	p{font-size:25px}
+}
+.widget{
+	li{background-color:$lightblue2 ; margin:2px 0;}
+	li a{color:$white; padding:5px 10px; display:block;
+	&:hover{text-decoration:none; background-color:$lightblue1;}
+	}
+}
+.leftcoldiv{
+	.btnsubmit{
+		@include button-variant($white, $brand-danger, $btn-danger-color);
+		@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+		@extend .btnhoc;
+		display:block;
+	}
+	h2{margin-top:0}
+	.sucess-message{color:$red;}
+}
+
+.site-content{
+	@include make-xs-column(12);
+	.main-image{border-top:10px solid #bd363f; margin-top:20px;}
+	.featured{
+		h4{color:$white; background:$red; padding: 8px 10px; font-size:14px}
+		@include make-sm-column(3);
+		margin-top:15px;
+		padding-left:0;
+	}
+	.content{
+		@include make-sm-column(9);
+		.service{@include make-sm-column(6);}
+		// about page
+		.about{@include make-xs-column(12);}
+		.hocimg{@include make-xs-column(2); padding-left:0}
+		.hocinfo{@include make-xs-column(10);}
+		display:inline-block;
+	}
+}
+
+.venue{
+	@include make-row();
+	padding-bottom:20px;
+	div{
+		@include make-xs-column(6);
+	}
+}
+
+// spin 
+.spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
